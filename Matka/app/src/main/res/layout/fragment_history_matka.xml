@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/istorija_bckrnd"
+    tools:context=".ExploreMatkaUI.ExploreMatkaHistoryFragment">
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/view_more"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:layout_margin="30dp"-->
+<!--        android:padding="10dp"-->
+<!--        android:layout_width="48dp"-->
+<!--        android:layout_height="48dp"-->
+<!--        app:cardCornerRadius="10dp"-->
+<!--        app:cardBackgroundColor="@color/white"-->
+<!--        >-->
+<!--    <ImageView-->
+<!--        android:layout_margin="7dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:src="@drawable/view_more"-->
+<!--       />-->
+<!--    </androidx.cardview.widget.CardView>-->
+
+<!--    <ImageView-->
+<!--        android:visibility="gone"-->
+<!--        android:layout_margin="30dp"-->
+<!--        android:id="@+id/view_less"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:src="@drawable/view_less"-->
+<!--    />-->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <TextView
+            android:textSize="18sp"
+            android:fontFamily="@font/ubuntu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Историја на Матка"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_Text"
+        android:padding="10dp"
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/white"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/naslov"
+                android:fontFamily="@font/ubuntubold"
+                android:textAlignment="center"
+                android:layout_margin="10dp"
+                android:textSize="15sp"
+                android:textColor="@color/dark_matka"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/story_layout"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/text_body"
+                        android:fontFamily="@font/ubuntu"
+                        android:textAlignment="center"
+                        android:layout_margin="10dp"
+                        android:textColor="#1c2827"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <ImageView
+                        android:id="@+id/slika_istorija"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/istorija_cover"
+                        />
+
+                    <TextView
+                        android:fontFamily="@font/ubuntubold"
+                        android:textAlignment="center"
+                        android:layout_margin="10dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/dark_matka"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/istorija_dva_naslov"
+                        />
+
+                    <TextView
+                        android:fontFamily="@font/ubuntu"
+                        android:textAlignment="center"
+                        android:layout_margin="10dp"
+                        android:textColor="#1c2827"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/istorija_dva_text"
+                        />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/istorija_dva"
+                        />
+                    <TextView
+                        android:fontFamily="@font/ubuntubold"
+                        android:textAlignment="center"
+                        android:layout_margin="10dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/dark_matka"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/istorija_tri_naslov"
+                        />
+
+                    <TextView
+                        android:fontFamily="@font/ubuntu"
+                        android:textAlignment="center"
+                        android:layout_margin="10dp"
+                        android:textColor="#1c2827"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/istorija_tri_text"
+                        />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/istorija_tri"
+                        />
+                    <TextView
+                        android:fontFamily="@font/ubuntubold"
+                        android:textAlignment="center"
+                        android:layout_margin="10dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/dark_matka"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/istorija_cetiri_naslov"
+                        />
+
+                    <TextView
+                        android:fontFamily="@font/ubuntu"
+                        android:textAlignment="center"
+                        android:layout_margin="10dp"
+                        android:textColor="#1c2827"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/istorija_cetiri_text"
+                        />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/istorija_pet"
+                        />
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

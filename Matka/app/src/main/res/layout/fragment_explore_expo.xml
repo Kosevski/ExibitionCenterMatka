@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ExploreMatkaUI.ExploreExpoFragment"
+    android:orientation="vertical"
+    android:gravity="bottom"
+    android:background="@color/light_grey"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <TextView
+            android:textSize="18sp"
+            android:fontFamily="@font/ubuntu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Експонати во Центарот"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="6dp"
+        app:cardBackgroundColor="@color/matka_light">
+
+        <TextView
+            android:fontFamily="@font/ubuntubold"
+            android:textSize="18sp"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/expo_voved"
+            android:textColor="@color/dark_matka"
+            android:textAlignment="center"
+            />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+<!--      <com.viewpagerindicator.UnderlinePageIndicator-->
+<!--          app:selectedColor="@color/matka_light"-->
+<!--          android:layout_marginStart="16dp"-->
+<!--          android:layout_marginEnd="16dp"-->
+<!--          android:layout_marginBottom="6dp"-->
+<!--          android:layout_marginTop="6dp"-->
+<!--          android:id="@+id/page_indicator"-->
+<!--          android:layout_width="match_parent"-->
+<!--          android:layout_height="3dp"/>-->
+
+        <com.viewpagerindicator.CirclePageIndicator
+            app:selectedColor="@color/matka_light"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="6dp"
+            android:id="@+id/page_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

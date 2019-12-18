@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/matka_light"
+    android:gravity="bottom"
+    tools:context=".ExploreMatkaUI.ExploreMatkaCenterFragment">
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu"
+            android:text="Изложбен Центар Матка"
+            android:textSize="18sp" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/history"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/ubuntu"
+            android:text="Историја"
+            android:textAllCaps="false"
+            android:textColor="@color/dark_matka"
+            app:icon="@drawable/history_book"
+            app:iconTint="@color/dark_matka"
+            app:iconGravity="textStart"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/ubuntu"
+            android:id="@+id/expo"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textAllCaps="false"
+            android:text="Експонати"
+            android:textColor="@color/dark_matka"
+            app:icon="@drawable/expo_icon"
+            app:iconTint="@color/dark_matka"
+            app:iconGravity="textStart"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/ubuntu"
+            android:id="@+id/videa"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textAllCaps="false"
+            android:text="Видеа"
+            android:backgroundTint="@color/dark_matka"
+            android:textColor="@color/white"
+            app:icon="@drawable/video_icon"
+            app:iconTint="@color/white"
+            app:iconGravity="textStart"
+
+            />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/perki1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/perki"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.807"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.188" />
+
+        <ImageView
+            android:id="@+id/perki3"
+            android:layout_width="180dp"
+            android:layout_height="166dp"
+            android:src="@drawable/perki"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.458"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.103" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="235dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/turbini"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/perki2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/perki"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.188" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</LinearLayout>
