@@ -1,91 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ExploreMatkaUI.ExploreExpoFragment"
-    android:orientation="vertical"
-    android:gravity="bottom"
     android:background="@color/light_grey"
-    >
+    android:orientation="vertical"
+    tools:context=".ExploreMatkaUI.ExploreExpoFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
         android:background="?attr/colorPrimary"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
         <TextView
-            android:textSize="18sp"
-            android:fontFamily="@font/ubuntu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Експонати во Центарот"/>
+            android:fontFamily="@font/ubuntu"
+            android:text="Експонати во Центарот"
+            android:textSize="18sp" />
 
     </androidx.appcompat.widget.Toolbar>
 
 
-    <com.google.android.material.card.MaterialCardView
+    <!--    <com.google.android.material.card.MaterialCardView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="16dp"-->
+    <!--        android:layout_marginEnd="16dp"-->
+    <!--        android:layout_marginTop="10dp"-->
+    <!--        android:layout_marginBottom="6dp"-->
+    <!--        app:cardBackgroundColor="@color/matka_light">-->
+
+    <!--        <TextView-->
+    <!--            android:fontFamily="@font/ubuntubold"-->
+    <!--            android:textSize="18sp"-->
+    <!--            android:layout_marginStart="6dp"-->
+    <!--            android:layout_marginEnd="6dp"-->
+    <!--            android:layout_marginTop="10dp"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="@string/expo_voved"-->
+    <!--            android:textColor="@color/dark_matka"-->
+    <!--            android:textAlignment="center"-->
+    <!--            />-->
+
+    <!--    </com.google.android.material.card.MaterialCardView>-->
+
+
+    <!--      <com.viewpagerindicator.UnderlinePageIndicator-->
+    <!--          app:selectedColor="@color/matka_light"-->
+    <!--          android:layout_marginStart="16dp"-->
+    <!--          android:layout_marginEnd="16dp"-->
+    <!--          android:layout_marginBottom="6dp"-->
+    <!--          android:layout_marginTop="6dp"-->
+    <!--          android:id="@+id/page_indicator"-->
+    <!--          android:layout_width="match_parent"-->
+    <!--          android:layout_height="3dp"/>-->
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="400dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="4dp" />
+
+    <com.viewpagerindicator.CirclePageIndicator
+        android:layout_above="@+id/media_card"
+        android:id="@+id/page_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        app:selectedColor="@color/matka_light" />
+
+    <com.google.android.material.card.MaterialCardView
+        app:cardCornerRadius="10dp"
+        android:id="@+id/media_card"
+        android:layout_above="@+id/scannerbtn"
+        android:layout_marginBottom="5dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="6dp"
-        app:cardBackgroundColor="@color/matka_light">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:fontFamily="@font/ubuntubold"
-            android:textSize="18sp"
-            android:layout_marginStart="6dp"
-            android:layout_marginEnd="6dp"
-            android:layout_marginTop="10dp"
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/expo_voved"
-            android:textColor="@color/dark_matka"
-            android:textAlignment="center"
-            />
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/play_audio"
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/media_play_icon"
+                />
+            <ImageView
+                android:id="@+id/pause_audio"
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/media_pause"
+                />
+            <ImageView
+                android:id="@+id/stop_audio"
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/media_stop_icon"
+                />
+            <ImageView
+                android:id="@+id/replay_audio"
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/replay_media_icon"
+                />
+        </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/scannerbtn"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:orientation="vertical">
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:text="Скенирај"
+        android:textColor="@color/dark_matka" />
 
-<!--      <com.viewpagerindicator.UnderlinePageIndicator-->
-<!--          app:selectedColor="@color/matka_light"-->
-<!--          android:layout_marginStart="16dp"-->
-<!--          android:layout_marginEnd="16dp"-->
-<!--          android:layout_marginBottom="6dp"-->
-<!--          android:layout_marginTop="6dp"-->
-<!--          android:id="@+id/page_indicator"-->
-<!--          android:layout_width="match_parent"-->
-<!--          android:layout_height="3dp"/>-->
-
-        <com.viewpagerindicator.CirclePageIndicator
-            app:selectedColor="@color/matka_light"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="6dp"
-            android:id="@+id/page_indicator"
-            android:layout_width="match_parent"
-            android:layout_height="10dp"/>
-
-
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/view_pager"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-
-
-    </LinearLayout>
-
-</LinearLayout>
+</RelativeLayout>

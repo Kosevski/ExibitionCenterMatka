@@ -1,351 +1,391 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginBottom="10dp"
-    tools:context=".ExploreMatkaUI.VideosFragment"
     android:background="@color/light_grey"
-    >
+    tools:context=".ExploreMatkaUI.VideosFragment">
 
 
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
-
-        <TextView
-            android:textSize="18sp"
-            android:fontFamily="@font/ubuntu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Едукативни видеа"/>
-
-    </androidx.appcompat.widget.Toolbar>
-
-    <RelativeLayout
-        android:id="@+id/denotnatesla"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:orientation="vertical">
 
-        <ImageView
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="240dp"
-            android:src="@drawable/denot_na_tesla" />
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
-        <ImageView
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu"
+                android:text="Едукативни видеа"
+                android:textSize="18sp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/play_video" />
-    </RelativeLayout>
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/denotnatesla"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_marginTop="-20dp"
+                        android:src="@drawable/denot_na_tesla" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/play_video" />
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:fontFamily="@font/ubuntubold"
+                    android:text="Денот на Тесла"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/crtezinatesla"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_marginTop="-20dp"
+                        android:src="@drawable/crtezi_denot_na_tesla" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/play_video" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:fontFamily="@font/ubuntubold"
+                    android:text="Цртежи – Денот на Тесла"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/istorija_na_elektrifikacija"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_marginTop="-20dp"
+                        android:src="@drawable/istorija_na_elektrifikacija" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:tint="@color/white"
+                        android:src="@drawable/play_video" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:fontFamily="@font/ubuntubold"
+                    android:text="Историја на електрификација во Македонија"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-
-        android:layout_marginTop="-13dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
-
-        <TextView
-            android:textSize="16sp"
-            android:fontFamily="@font/ubuntubold"
-            android:layout_gravity="center"
-            android:layout_marginStart="7dp"
-            android:layout_marginEnd="7dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Денот на Тесла"
-            />
-
-    </androidx.cardview.widget.CardView>
-
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
 
     <RelativeLayout
-        android:id="@+id/crtezinatesla"
-        android:gravity="center"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="240dp"
-        android:src="@drawable/crtezi_denot_na_tesla"
-        />
-
-        <ImageView
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
+            android:id="@+id/energetska_efikasnost"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/play_video" />
-    </RelativeLayout>
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="-20dp"
+                android:src="@drawable/energetska_efikasnost" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:tint="@color/white"
+                android:src="@drawable/play_video" />
+        </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/ubuntubold"
+                android:text="Енергетска ефикасност"
+                android:textSize="16sp" />
+    </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
     <androidx.cardview.widget.CardView
-        android:layout_marginTop="-13dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
-
-        <TextView
-            android:textSize="16sp"
-            android:fontFamily="@font/ubuntubold"
-            android:layout_gravity="center"
-            android:layout_marginStart="7dp"
-            android:layout_marginEnd="7dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Цртежи – Денот на Тесла"
-            />
-
-    </androidx.cardview.widget.CardView>
-
-
-    <RelativeLayout
-        android:id="@+id/istorija_na_elektrifikacija"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="240dp"
-        android:src="@drawable/istorija_na_elektrifikacija"
-        />
-
-        <ImageView
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/patot_na_strujata"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/play_video" />
-    </RelativeLayout>
+            android:gravity="center">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="-20dp"
+                android:src="@drawable/patot_na_strijata" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:tint="@color/white"
+                android:src="@drawable/play_video" />
+        </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/ubuntubold"
+                android:text="Патот на струјата"
+                android:textSize="16sp" />
+    </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
-        android:layout_marginTop="-13dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
-
-        <TextView
-            android:textSize="16sp"
-            android:fontFamily="@font/ubuntubold"
-            android:layout_gravity="center"
-            android:layout_marginStart="7dp"
-            android:layout_marginEnd="7dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Историја на електрификација во Македонија"
-            />
-
-    </androidx.cardview.widget.CardView>
-
-
-    <RelativeLayout
-        android:id="@+id/energetska_efikasnost"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="240dp"
-        android:src="@drawable/energetska_efikasnost"
-        />
-
-        <ImageView
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/kako_se_prenesuva"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/play_video" />
-    </RelativeLayout>
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="-20dp"
+                android:src="@drawable/kako_se_prenesuva_strujata" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:tint="@color/white"
+                android:src="@drawable/play_video" />
+        </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+            android:layout_margin="20dp"
+                android:fontFamily="@font/ubuntubold"
+                android:text="Како се пренесува струјата?"
+                android:textSize="16sp" />
+    </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
-        android:layout_marginTop="-13dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
-
-        <TextView
-            android:textSize="16sp"
-            android:fontFamily="@font/ubuntubold"
-            android:layout_gravity="center"
-            android:layout_marginStart="7dp"
-            android:layout_marginEnd="7dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Енергетска ефикасност"
-            />
-
-    </androidx.cardview.widget.CardView>
-
-
-    <RelativeLayout
-        android:id="@+id/patot_na_strujata"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="240dp"
-        android:src="@drawable/patot_na_strijata"
-        />
-
-        <ImageView
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/obnovlivi_izvori"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/play_video" />
-    </RelativeLayout>
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="-20dp"
+                android:src="@drawable/obnovlivi_izvori_na_energija" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:tint="@color/white"
+                android:src="@drawable/play_video" />
+        </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/ubuntubold"
+                android:text="Обновливи извори на енергија"
+                android:textSize="16sp" />
+    </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
-        android:layout_marginTop="-13dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
-
-        <TextView
-            android:textSize="16sp"
-            android:fontFamily="@font/ubuntubold"
-            android:layout_gravity="center"
-            android:layout_marginStart="7dp"
-            android:layout_marginEnd="7dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Патот на струјата"
-            />
-
-    </androidx.cardview.widget.CardView>
-
-
-    <RelativeLayout
-        android:id="@+id/kako_se_prenesuva"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="240dp"
-        android:src="@drawable/kako_se_prenesuva_strujata"
-        />
-
-        <ImageView
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/shtoe_struja"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/play_video" />
-    </RelativeLayout>
-    <androidx.cardview.widget.CardView
-        android:layout_marginTop="-13dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="50dp">
+            android:gravity="center">
 
-        <TextView
-            android:textSize="16sp"
-            android:fontFamily="@font/ubuntubold"
-            android:layout_gravity="center"
-            android:layout_marginStart="7dp"
-            android:layout_marginEnd="7dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Како се пренесува струјата?"
-            />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="-20dp"
+                android:src="@drawable/shto_e_struja" />
 
-    </androidx.cardview.widget.CardView>
-
-
-    <RelativeLayout
-        android:id="@+id/obnovlivi_izvori"
-        android:gravity="center"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="240dp"
-        android:src="@drawable/obnovlivi_izvori_na_energija"
-        />
-
-        <ImageView
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/play_video" />
-    </RelativeLayout>
-    <androidx.cardview.widget.CardView
-        android:layout_marginTop="-13dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="50dp">
-
-        <TextView
-            android:textSize="16sp"
-            android:fontFamily="@font/ubuntubold"
-            android:layout_gravity="center"
-            android:layout_marginStart="7dp"
-            android:layout_marginEnd="7dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Обновливи извори на енергија"
-            />
-
-    </androidx.cardview.widget.CardView>
-
-
-    <RelativeLayout
-        android:id="@+id/shtoe_struja"
-        android:gravity="center"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="240dp"
-        android:src="@drawable/shto_e_struja"
-        />
-
-        <ImageView
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/play_video" />
-    </RelativeLayout>
-    <androidx.cardview.widget.CardView
-        android:layout_marginTop="-13dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="50dp">
-
-        <TextView
-            android:textSize="16sp"
-            android:fontFamily="@font/ubuntubold"
-            android:layout_gravity="center"
-            android:layout_marginStart="7dp"
-            android:layout_marginEnd="7dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Што е струја?"
-            />
-
-    </androidx.cardview.widget.CardView>
-</LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/play_video" />
+        </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/ubuntubold"
+                android:text="Што е струја?"
+                android:textSize="16sp" />
+    </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
 
 </ScrollView>
