@@ -8,8 +8,8 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.matka.ExploreMatkaUI.ExploreMatkaActivity;
 import com.example.matka.R;
+import com.example.matka.services.PlayAudioService;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
@@ -42,7 +42,7 @@ public class MainScannerActivity extends AppCompatActivity {
 
         IntentResult result = IntentIntegrator.parseActivityResult(resultCode, data);
 
-        if(result.getContents() == null) {
+        if (result.getContents() == null) {
             Log.d("MainActivity", "Cancelled scan");
             Toast.makeText(this, "Откажано", Toast.LENGTH_LONG).show();
         } else {
@@ -50,17 +50,24 @@ public class MainScannerActivity extends AppCompatActivity {
             Toast.makeText(this, "Резултат: " + result.getContents(), Toast.LENGTH_LONG).show();
         }
 
-        if(result.getContents().equals("Test")){
-            Intent intent = new Intent(MainScannerActivity.this, ExploreMatkaActivity.class);
-            intent.putExtra("ResultContents", result.getContents());
-            startActivity(intent);
+        if (result.getContents().equals("Test")) {
+            Intent serviceIntent = new Intent(this, PlayAudioService.class);
+            serviceIntent.putExtra("ResultContents", result.getContents());
+            startService(serviceIntent);
+//            startActivity(serviceIntent);
+//            ContextCompat.startForegroundService(this, serviceIntent);
         }
     }
+//            Intent intent = new Intent(this,  PlayAudioService.class);
+//            intent.putExtra("ResultContents", result.getContents());
+//            startService(intent);
 
-public void scanMarginScanner() {
+//    }
+
+    public void scanMarginScanner() {
         IntentIntegrator integrator = new IntentIntegrator(this);
         integrator.setOrientationLocked(false);
         integrator.setCaptureActivity(BarcodeCaptureActivity.class);
         integrator.initiateScan();
-        }
+    }
 }
