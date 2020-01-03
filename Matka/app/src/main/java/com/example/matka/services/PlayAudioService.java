@@ -5,80 +5,68 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
-import android.app.TaskStackBuilder;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.IBinder;
+import android.util.Log;
+import android.widget.RemoteViews;
 
 import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
 
-import com.example.matka.MainActivity;
 import com.example.matka.R;
 
 public class PlayAudioService extends Service {
 
-    final MediaPlayer mp = MediaPlayer.create(this, R.raw.danceoftheknights);
-
-    @Override
-    public void onCreate() {
-        super.onCreate();
-    }
-
+    private MediaPlayer mp;
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-
+        Log.d("PlayAudioService", "onStartCommand");
         String resultQR = intent.getStringExtra("ResultContents");
         createNotificationChannel();
 
-        Intent notificationIntent = new Intent(this, MainActivity.class);
-//        PendingIntent pendingIntent = PendingIntent.getActivity(this,
-//                0, notificationIntent, 0);
-        PendingIntent notificationPendingIntent;
-        TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
-        stackBuilder.addNextIntentWithParentStack(notificationIntent);
-        notificationPendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
+        Intent stopIntent = new Intent(this, StopPlayerBroadcastReceiver.class);
+        PendingIntent stopPendingIntent = PendingIntent.getBroadcast(this, 0, stopIntent, 0);
+
+        RemoteViews contentView = new RemoteViews(getPackageName(), R.layout.notification_layout);
+
+        contentView.setOnClickPendingIntent(R.id.stop_audio, stopPendingIntent);
         Notification notification = new NotificationCompat.Builder(this, "CHANNEL_ID")
-                .setContentTitle("Foreground Service")
-                .setContentText(resultQR)
+//                .setContentTitle("Foreground Service")
+//                .setContentText(resultQR)
                 .setSmallIcon(R.drawable.media_play_icon)
-                .setContentIntent(notificationPendingIntent)
+                .setCustomBigContentView(contentView)
+                .addAction(R.drawable.media_stop_icon, "Stop", stopPendingIntent)
                 .build();
 
+//        if ((intent.getStringExtra("ResultContents")) != null) {
+//            if ((intent.getStringExtra("ResultContents")).equals("Test")) {
+        mp = MediaPlayer.create(this, R.raw.danceoftheknights);
+        mp.start();
         startForeground(1, notification);
-
-//        final MediaPlayer mp = MediaPlayer.create(this, R.raw.danceoftheknights);
-//        mp.start();
-
-//        stopSelf();
-
+//            }
+//        }
         return START_NOT_STICKY;
-
-//
-//        if((intent.getStringExtra("ResultContents"))!=null){
-//            if((intent.getStringExtra("ResultContents")).equals("Test")){
-//                mp.start();
-//            }}
-
     }
-
-
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
         return null;
     }
 
-
     @Override
     public void onDestroy() {
         super.onDestroy();
+        if (mp != null) {
+            mp.stop();
+        }
+        stopForeground(true);
     }
-
     private void createNotificationChannel() {
-
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel serviceChannel = new NotificationChannel(
                     "CHANNEL_ID",
@@ -86,7 +74,15 @@ public class PlayAudioService extends Service {
                     NotificationManager.IMPORTANCE_DEFAULT
             );
             NotificationManager manager = getSystemService(NotificationManager.class);
-            manager.createNotificationChannel(serviceChannel);
+            if (manager != null) {
+                manager.createNotificationChannel(serviceChannel);
+            }
+        }
+    }
+    public static class StopPlayerBroadcastReceiver extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            context.stopService(new Intent(context, PlayAudioService.class));
         }
     }
 }

@@ -2,11 +2,6 @@ package com.example.matka.ExploreMatkaUI;
 
 
 import android.os.Bundle;
-
-import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +10,10 @@ import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Switch;
+
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.example.matka.R;
 
@@ -65,7 +63,7 @@ public class ExploreMatkaCenterFragment extends Fragment {
         expoBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ExploreExpoFragment fragment = new ExploreExpoFragment();
+                ExploreExpoFragment fragment = new ExploreExpoFragment(getFragmentManager());
                 fragmentManager.beginTransaction().replace(R.id.frame_layout, fragment).commit();
             }
         });

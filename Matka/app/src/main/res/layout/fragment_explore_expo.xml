@@ -24,6 +24,15 @@
             android:text="Експонати во Центарот"
             android:textSize="18sp" />
 
+        <ImageView
+            android:id="@+id/galerija_expo_img"
+            android:layout_marginStart="40dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:tint="@color/white"
+            android:src="@drawable/sliki_expo_icon"
+            />
+
     </androidx.appcompat.widget.Toolbar>
 
 
@@ -64,6 +73,8 @@
 
 
     <androidx.viewpager.widget.ViewPager
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:layout_below="@+id/toolbar"
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
@@ -72,7 +83,7 @@
         android:layout_marginTop="4dp" />
 
     <com.viewpagerindicator.CirclePageIndicator
-        android:layout_above="@+id/media_card"
+        android:layout_above="@+id/scannerbtn"
         android:id="@+id/page_indicator"
         android:layout_width="match_parent"
         android:layout_height="10dp"
@@ -82,53 +93,53 @@
         android:layout_marginEnd="16dp"
         app:selectedColor="@color/matka_light" />
 
-    <com.google.android.material.card.MaterialCardView
-        app:cardCornerRadius="10dp"
-        android:id="@+id/media_card"
-        android:layout_above="@+id/scannerbtn"
-        android:layout_marginBottom="5dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+<!--    <com.google.android.material.card.MaterialCardView-->
+<!--        app:cardCornerRadius="10dp"-->
+<!--        android:id="@+id/media_card"-->
+<!--        android:layout_above="@+id/scannerbtn"-->
+<!--        android:layout_marginBottom="5dp"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+<!--        <LinearLayout-->
+<!--            android:orientation="horizontal"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
 
-            <ImageView
-                android:id="@+id/play_audio"
-                android:layout_margin="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/media_play_icon"
-                />
-            <ImageView
-                android:id="@+id/pause_audio"
-                android:layout_margin="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/media_pause"
-                />
-            <ImageView
-                android:id="@+id/stop_audio"
-                android:layout_margin="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/media_stop_icon"
-                />
-            <ImageView
-                android:id="@+id/replay_audio"
-                android:layout_margin="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/replay_media_icon"
-                />
-        </LinearLayout>
+<!--            <ImageView-->
+<!--                android:id="@+id/play_audio"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/media_play_icon"-->
+<!--                />-->
+<!--            <ImageView-->
+<!--                android:id="@+id/pause_audio"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/media_pause"-->
+<!--                />-->
+<!--            <ImageView-->
+<!--                android:id="@+id/stop_audio"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/media_stop_icon"-->
+<!--                />-->
+<!--            <ImageView-->
+<!--                android:id="@+id/replay_audio"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/replay_media_icon"-->
+<!--                />-->
+<!--        </LinearLayout>-->
 
-    </com.google.android.material.card.MaterialCardView>
+<!--    </com.google.android.material.card.MaterialCardView>-->
 
     <Button
         android:id="@+id/scannerbtn"
@@ -140,5 +151,7 @@
         android:layout_marginBottom="10dp"
         android:text="Скенирај"
         android:textColor="@color/dark_matka" />
+
+
 
 </RelativeLayout>

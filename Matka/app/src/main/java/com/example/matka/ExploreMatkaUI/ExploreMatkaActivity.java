@@ -58,7 +58,7 @@ public class ExploreMatkaActivity extends AppCompatActivity {
         if((getIntent().getStringExtra("ResultContents"))!=null){
         if((getIntent().getStringExtra("ResultContents")).equals("Test")){
             mp.start();
-            ExploreExpoFragment fragment = new ExploreExpoFragment();
+            ExploreExpoFragment fragment = new ExploreExpoFragment(getSupportFragmentManager());
             fragmentManager.beginTransaction().replace(R.id.frame_layout, fragment).commit();
         }}
     }

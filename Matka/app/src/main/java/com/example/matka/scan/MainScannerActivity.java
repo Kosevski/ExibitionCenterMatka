@@ -54,20 +54,16 @@ public class MainScannerActivity extends AppCompatActivity {
             Intent serviceIntent = new Intent(this, PlayAudioService.class);
             serviceIntent.putExtra("ResultContents", result.getContents());
             startService(serviceIntent);
-//            startActivity(serviceIntent);
-//            ContextCompat.startForegroundService(this, serviceIntent);
         }
     }
-//            Intent intent = new Intent(this,  PlayAudioService.class);
-//            intent.putExtra("ResultContents", result.getContents());
-//            startService(intent);
 
-//    }
 
     public void scanMarginScanner() {
         IntentIntegrator integrator = new IntentIntegrator(this);
         integrator.setOrientationLocked(false);
         integrator.setCaptureActivity(BarcodeCaptureActivity.class);
         integrator.initiateScan();
+
+        integrator.setRequestCode(CUSTOMIZED_REQUEST_CODE);
     }
 }
