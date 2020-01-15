@@ -8,6 +8,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.matka.ExploreMatkaUI.ExploreMatkaActivity;
 import com.example.matka.R;
 import com.example.matka.services.PlayAudioService;
 import com.google.zxing.integration.android.IntentIntegrator;
@@ -50,20 +51,26 @@ public class MainScannerActivity extends AppCompatActivity {
             Toast.makeText(this, "Резултат: " + result.getContents(), Toast.LENGTH_LONG).show();
         }
 
-        if (result.getContents().equals("Test")) {
+//        if (result.getContents().equals("Test")) {
             Intent serviceIntent = new Intent(this, PlayAudioService.class);
             serviceIntent.putExtra("ResultContents", result.getContents());
             startService(serviceIntent);
+
+            Intent intent = new Intent(this, ExploreMatkaActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
         }
-    }
+//    }
 
 
     public void scanMarginScanner() {
         IntentIntegrator integrator = new IntentIntegrator(this);
         integrator.setOrientationLocked(false);
         integrator.setCaptureActivity(BarcodeCaptureActivity.class);
+        integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE);
+        integrator.setRequestCode(CUSTOMIZED_REQUEST_CODE);
+        integrator.setBeepEnabled(false);
         integrator.initiateScan();
 
-        integrator.setRequestCode(CUSTOMIZED_REQUEST_CODE);
     }
 }

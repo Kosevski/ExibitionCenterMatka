@@ -38,9 +38,9 @@ public class PlayAudioService extends Service {
         Notification notification = new NotificationCompat.Builder(this, "CHANNEL_ID")
 //                .setContentTitle("Foreground Service")
 //                .setContentText(resultQR)
-                .setSmallIcon(R.drawable.media_play_icon)
-                .setCustomBigContentView(contentView)
-                .addAction(R.drawable.media_stop_icon, "Stop", stopPendingIntent)
+                .setSmallIcon(R.drawable.logo)
+                .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
+                .setCustomContentView(contentView)
                 .build();
 
 //        if ((intent.getStringExtra("ResultContents")) != null) {
