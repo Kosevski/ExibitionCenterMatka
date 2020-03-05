@@ -115,7 +115,7 @@ public class ExploreExpoFragment extends Fragment {
             }
         });
 
-        final MediaPlayer mp = MediaPlayer.create(getContext(), R.raw.danceoftheknights);
+        final MediaPlayer mp = MediaPlayer.create(getContext(), R.raw.citati_od_naucnici);
 
 
         return rootView;

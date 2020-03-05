@@ -19,7 +19,7 @@ public class ExploreMatkaActivity extends AppCompatActivity {
         ExploreMatkaCenterFragment mainExploreFragment = new ExploreMatkaCenterFragment(fragmentManager);
         fragmentManager.beginTransaction().replace(R.id.frame_layout, mainExploreFragment).commit();
 
-        final MediaPlayer mp = MediaPlayer.create(this, R.raw.danceoftheknights);
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.citati_od_naucnici);
 
 //        play = findViewById(R.id.play_audio);
 //        pause = findViewById(R.id.pause_audio);

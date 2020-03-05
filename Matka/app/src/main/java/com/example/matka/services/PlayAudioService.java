@@ -45,7 +45,7 @@ public class PlayAudioService extends Service {
 
 //        if ((intent.getStringExtra("ResultContents")) != null) {
 //            if ((intent.getStringExtra("ResultContents")).equals("Test")) {
-        mp = MediaPlayer.create(this, R.raw.danceoftheknights);
+        mp = MediaPlayer.create(this, R.raw.citati_od_naucnici);
         mp.start();
         startForeground(1, notification);
 //            }

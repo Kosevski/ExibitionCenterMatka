@@ -8,6 +8,7 @@
 
 
     <ImageView
+        android:background="@color/black_transparent_low"
         android:layout_marginStart="10dp"
         android:id="@+id/imglogonotif"
         android:layout_width="70dp"
@@ -22,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_marginStart="20dp"
+        android:textColor="@color/black"
         android:layout_toEndOf="@+id/imglogonotif"
         android:text="Изложбен центар Матка" />
 
