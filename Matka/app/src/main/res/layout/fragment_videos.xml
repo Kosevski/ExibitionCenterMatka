@@ -25,7 +25,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/ubuntu"
-                android:text="Едукативни видеа"
+                android:text="@string/educational_videos"
                 android:textSize="18sp" />
 
         </androidx.appcompat.widget.Toolbar>
@@ -71,7 +71,7 @@
                     android:layout_gravity="center"
                     android:layout_margin="20dp"
                     android:fontFamily="@font/ubuntubold"
-                    android:text="Денот на Тесла"
+                    android:text="@string/nikola_tesla_day"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -118,7 +118,7 @@
                     android:layout_gravity="center"
                     android:layout_margin="20dp"
                     android:fontFamily="@font/ubuntubold"
-                    android:text="Цртежи – Денот на Тесла"
+                    android:text="@string/drawings_nikola_tesla_day"
                     android:textSize="16sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -163,7 +163,7 @@
                     android:layout_gravity="center"
                     android:layout_margin="20dp"
                     android:fontFamily="@font/ubuntubold"
-                    android:text="Историја на електрификација во Македонија"
+                    android:text="@string/history_of_electrification_in_macedonia"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -209,7 +209,7 @@
                 android:layout_gravity="center"
                 android:layout_margin="20dp"
                 android:fontFamily="@font/ubuntubold"
-                android:text="Енергетска ефикасност"
+                android:text="@string/energy_efficiency"
                 android:textSize="16sp" />
     </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -253,7 +253,7 @@
                 android:layout_gravity="center"
                 android:layout_margin="20dp"
                 android:fontFamily="@font/ubuntubold"
-                android:text="Патот на струјата"
+                android:text="@string/the_path_of_electricity"
                 android:textSize="16sp" />
     </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -297,7 +297,7 @@
                 android:layout_gravity="center"
             android:layout_margin="20dp"
                 android:fontFamily="@font/ubuntubold"
-                android:text="Како се пренесува струјата?"
+                android:text="@string/how_is_electricity_conducted"
                 android:textSize="16sp" />
     </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -341,7 +341,7 @@
                 android:layout_gravity="center"
                 android:layout_margin="20dp"
                 android:fontFamily="@font/ubuntubold"
-                android:text="Обновливи извори на енергија"
+                android:text="@string/renewable_sources_of_energy"
                 android:textSize="16sp" />
     </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -380,7 +380,7 @@
                 android:layout_gravity="center"
                 android:layout_margin="20dp"
                 android:fontFamily="@font/ubuntubold"
-                android:text="Што е струја?"
+                android:text="@string/what_is_electricity"
                 android:textSize="16sp" />
     </LinearLayout>
         </androidx.cardview.widget.CardView>

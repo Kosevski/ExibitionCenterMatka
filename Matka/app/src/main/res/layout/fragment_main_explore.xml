@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/ubuntu"
-            android:text="Изложбен Центар Матка"
+            android:text="@string/matka_exhibition_center"
             android:textSize="18sp" />
 
 
@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:fontFamily="@font/ubuntu"
-            android:text="Историја"
+            android:text="@string/history"
             android:textAllCaps="false"
             android:textColor="@color/dark_matka"
             app:icon="@drawable/history_book"
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:textAllCaps="false"
-            android:text="Експонати"
+            android:text="@string/exhibits"
             android:textColor="@color/dark_matka"
             app:icon="@drawable/expo_icon"
             app:iconTint="@color/dark_matka"
@@ -74,7 +74,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:textAllCaps="false"
-            android:text="Видеа"
+            android:text="@string/videos"
             android:backgroundTint="@color/dark_matka"
             android:textColor="@color/white"
             app:icon="@drawable/video_icon"

@@ -43,13 +43,70 @@ public class PlayAudioService extends Service {
                 .setCustomContentView(contentView)
                 .build();
 
-//        if ((intent.getStringExtra("ResultContents")) != null) {
-//            if ((intent.getStringExtra("ResultContents")).equals("Test")) {
-        mp = MediaPlayer.create(this, R.raw.citati_od_naucnici);
-        mp.start();
-        startForeground(1, notification);
-//            }
-//        }
+        if ((intent.getStringExtra("ResultContents")) != null) {
+            switch ((intent.getStringExtra("ResultContents"))) {
+                case "citati_od_naucnici":
+                    mp = MediaPlayer.create(this, R.raw.citati_od_naucnici);
+                    mp.start();
+                    startForeground(1, notification);
+                    break;
+                case "elektrifikacija_vo_mk":
+                    mp = MediaPlayer.create(this, R.raw.elektrifikacija_vo_mk);
+                    mp.start();
+                    startForeground(1, notification);
+                    break;
+                case "kontrolna_soba":
+                    mp = MediaPlayer.create(this, R.raw.kontrolna_soba);
+                    mp.start();
+                    startForeground(1, notification);
+                    break;
+                case "maketa_na_elektrodistributiven_sistem":
+                    mp = MediaPlayer.create(this, R.raw.maketa_na_elektrodistributiven_sistem);
+                    mp.start();
+                    startForeground(1, notification);
+                    break;
+                case "mapa_na_elektrifikacija":
+                    mp = MediaPlayer.create(this, R.raw.mapa_na_elektrifikacija);
+                    mp.start();
+                    startForeground(1, notification);
+                    break;
+                case "masinska_sala":
+                    mp = MediaPlayer.create(this, R.raw.masinska_sala);
+                    mp.start();
+                    startForeground(1, notification);
+                    break;
+                case "originalen_alat":
+                    mp = MediaPlayer.create(this, R.raw.originalen_alat);
+                    mp.start();
+                    startForeground(1, notification);
+                    break;
+                case "plazma_paneli":
+                    mp = MediaPlayer.create(this, R.raw.plazma_paneli);
+                    mp.start();
+                    startForeground(1, notification);
+                    break;
+                case "plazma_topka":
+                    mp = MediaPlayer.create(this, R.raw.plazma_topka);
+                    mp.start();
+                    startForeground(1, notification);
+                    break;
+                case "transformator":
+                    mp = MediaPlayer.create(this, R.raw.transformator);
+                    mp.start();
+                    startForeground(1, notification);
+                    break;
+                case "upotreba_na_elektricna_energija_vo_svetot":
+                    mp = MediaPlayer.create(this, R.raw.upotreba_na_elektricna_energija_vo_svetot);
+                    mp.start();
+                    startForeground(1, notification);
+                    break;
+                case "veternica":
+                    mp = MediaPlayer.create(this, R.raw.veternica);
+                    mp.start();
+                    startForeground(1, notification);
+                    break;
+            }
+        }
         return START_NOT_STICKY;
     }
     @Nullable

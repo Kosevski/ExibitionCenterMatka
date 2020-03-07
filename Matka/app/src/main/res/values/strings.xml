@@ -1,77 +1,92 @@
 <resources>
     <string name="app_name">Matka</string>
-    <string name="intro">Електричната енергија за нас е достапна на еден "клик", но нејзината еволуција е долга, генијална, посебна. Токму затоа го создадовме.</string>
-    <string name="explore_matka">Истражи го центарот</string>
-    <string name="visit_us">Посети ја Матка</string>
+    <string name="intro">Electricity is available to us with a “click”, but its evolution is long, brilliant, exceptional. That is why we have created</string>
+    <string name="explore_matka">Explore the center</string>
+    <string name="visit_us">Visit Matka</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="istorija_eden_naslov">Историја</string>
-    <string name="istorija_eden_text">Во триесеттите години на минатиот век,
-        на излезот од кањонот Матка е изградено вештачко езеро на реката Треска,
-        со бетонска брана, за производство на електрична енергија.
-        Градежните работи на браната започнале во 1935 година,
-        а хидроцентралата започнала со работа во 1938 година со инсталиран капацитет од 4,2 MW</string>
-    <string name="istorija_dva_naslov">Изградбата била обемна и бил колективен потфат..</string>
-    <string name="istorija_dva_text">Капитален проект на своето време, но најзаслужен за нејзината изградба е проф. Д-р Миладин Пеќинар
-        идејниот автор на проектот, проектант и човекот што вршел надзор на изградбата. Кога браната била готова Пеќинар застанал на нејзиниот врв и извикал:
-        „Ако отиде браната нека отиде со неа и тој што ја замислил“</string>
-    <string name="istorija_tri_naslov">За време на Втората светска војна токму ХЕЦ Матка била еден од стратешките објекти околу која се воделе битки.</string>
-    <string name="istorija_tri_text"> Таа била цел на бомбардирање во текот на воените операции,
-        при повекувањето на фашистичките сили. Дури имало и обид за нејзино минирање но,
-        група партизани херојски ја одбраниле Матка. Браната на хидроцентралата Матка неколку пати го спасила и Скопје
-        од поплави и тоа за време на големата полава во 1962 година и во 1979 кога браната задржала голерма количина
-        на вода и придонела за спречување на поголеми катастрофи.</string>
-    <string name="istorija_cetiri_naslov">Хидроцентралата Матка денес е дел од производството на обновлива енергија на ЕВН во Македонија.</string>
-    <string name="istorija_cetiri_text">Во 2008 година е направена реконструкција и
-        е изградена комплетно нова хидроцентрала. Со изградбата на нова машинска зграда,
-        лоцирана во непосредна близина, старата машинска зграда престана со функција,
-        по што во 2016 година е пренаменета во едукативно-изложбен центар.</string>
+    <string name="istorija_eden_naslov">History</string>
+
+    <string name="istorija_eden_text">In the thirties of the last century, an artificial lake was built at the exit of the canyon on Lake Treska,
+        with a concrete dam for electricity production. Construction work on the dam began in 1935 and HPP began operations in 1938 with an installed capacity of 4.2 MW.</string>
+
+    <string name="istorija_dva_naslov">The construction was extensive and it was a collective venture..</string>
+
+    <string name="istorija_dva_text">a capital project of its time, but credits for it’s construction can be attributed to Professor. Dr. Miladin Pekinar the author of the project, the designer and the man supervising the construction.
+        When the dam was completed, Pekinar standing on its top shouted: “If you the dam goes, let the one who envisioned it go with it”.</string>
+
+    <string name="istorija_tri_naslov">During the Second World War, HPP Matka was one of the strategic objects around which battles were fought.</string>
+
+    <string name="istorija_tri_text"> It was the target of bombing in the military operations during the retreat of the fascist forces.
+        Even an attempt was made to blow the dam up, but brave group of partisans heroically defended Matka. The dam of HPP Matka has rescued Skopje from floods several times,
+        during the great flood in 1962 and 1979 when the dam held a huge amount of water and contributed to the prevention of major disaster.</string>
+
+    <string name="istorija_cetiri_naslov">The HPP Match today is part of the production of renewable energy of EVN Macedonia.</string>
+
+    <string name="istorija_cetiri_text">In 2008 it has been reconstructed and a completely new hydropower plan has been built.
+        With the construction of the new powerhouse, located near the old, the old powerhouse ceased operation,
+        after which in 2016 was transformed into an educational and exhibition center.</string>
+
+    <string name="expo_voved">In the display of the exhibition center today you can see:</string>
+
+    <string name="expo_naslov">Exhibits</string>
 
 
-    <string name="expo_voved">Во поставката на изложбениот центар можат да се видат:</string>
-
-    <string name="expo_naslov">Експонати</string>
-
-
-    <string name="Expo_naslov_1">Приказ на електро дистрибутивен систем</string>
-    <string name="Expo_text_1">Откријте го патот на електричната енергија од моментот на производство
-        сè до нејзината финална дестинација во нашите домови, во фабриките, болниците, училиштата…</string>
+    <string name="Expo_naslov_1">Display of the electro distribution system</string>
+    <string name="Expo_text_1">Discover the path of electricity from its production to its final destination in our homes, factories, hospitals, schools…</string>
 
 
-    <string name="Expo_naslov_2">Контролна соба</string>
-    <string name="Expo_text_2">Од контролната соба вработените го надгледувале работењето на хидроцентралата.
-        Сега и вие имате можност да ракувате со инструменти стари 80 години.</string>
+    <string name="Expo_naslov_2">Control room</string>
+    <string name="Expo_text_2">The employees oversaw the work of the hydroelectric power plant from the control room. You too have the opportunity to see how 80-year-old instruments work.</string>
 
-    <string name="Expo_naslov_3">Диспечерска табла</string>
-    <string name="Expo_text_3">Погледнете ја оригиналната диспечерска табла, која во старото Електростопанство се користела од 1974 година.
-        Со воведувањето современи информатички технологии и дигитализација на мрежата во ЕВН,
-        оваа табла останува потсетник на работата на диспечерите во минатото.</string>
+    <string name="Expo_naslov_3">Dispatch board</string>
 
-    <string name="Expo_naslov_4">Светилки</string>
-    <string name="Expo_text_4">Светилката е еден вид електричен уред што го користиме секојдневно.
-        Како и другите уреди, некои светилки трошат помалку, а некои повеќе енергија.
-        Знаете ли која светилка е најштедлива, а која троши најмногу? Пробајте сами да го пронајдете одговорот.</string>
+    <string name="Expo_text_3">Look at the original dispatch board, which was used in the old “Elektrostopanstvo” until 1974.
+        By introducing modern information technologies and digitalization of the EVN network, this board became a reminder of the work of the dispatchers in the past.</string>
 
-    <string name="Expo_naslov_5">Фотоволтаици</string>
-    <string name="Expo_text_5">Како сончевата енергија се претвора во електрична со помош на сончеви панели?
-        Имаме мини подвижно сонце , па земете го и обидете се да произведете што повеќе енергија со него.
-</string>
+    <string name="Expo_naslov_4">Light bulbs</string>
+    <string name="Expo_text_4">The light bulb is an electric device that we use daily.
+        Like other devices, some consume more and some less energy. Do you know which bulb consumes the most? Try to find the answer yourselves.</string>
 
-    <string name="Expo_naslov_6">Ветерница</string>
-    <string name="Expo_text_6">Ветрот е еден од обновливите извори на енергија.
-        Дознајте како со помош на ветерниците, силата на ветрот можеме да ја користиме за создавање струја.
-</string>
+    <string name="Expo_naslov_5">Photovoltaic panels</string>
+    <string name="Expo_text_5">How solar energy turns to electrical energy with the help of solar panels? We have a mini sun, so go head and try to produce as much electricity as you can with it.</string>
+
+    <string name="Expo_naslov_6">Windmill</string>
+    <string name="Expo_text_6">Wind is one of the renewable source of energy. Learn how with the help of windmills, the force of the wind can be set to produce electricity.</string>
 
 
-    <string name="Expo_naslov_7">Ван де Граф</string>
-    <string name="Expo_text_7">Како делува електрицитетот на најбиските објекти? Со Ван де Граф
-        генераторот ќе ви помогнеме да дознаете без опасност вистински да ве „фати“ струја.</string>
+    <string name="Expo_naslov_7">Van de Graaff</string>
+    <string name="Expo_text_7">How does electricity affect near-by objects? With the Van de Graaff regenerator we will help you find out without the danger of “electrocution”.</string>
 
-    <string name="Expo_naslov_8">Плазма топка</string>
-    <string name="Expo_text_8">Магични светлосни зраци преку стаклена топка ви ја допираат раката, а не знаете зошто?
-        Посетете нè и откријте ги ефектите што плазма топката ги има врз човековото тело.</string>
+    <string name="Expo_naslov_8">Plasma ball</string>
+    <string name="Expo_text_8">Magic light beams through a glass ball touching your hand, and you don’t know why? Visit us and learn about the effects the plasma ball has on the human body.</string>
     <string name="title_activity_maps">Map</string>
+
+    <string name="contact">Contact</string>
+    <string name="_072_935_105">072/935-105</string>
+    <string name="bus_line">Bus line</string>
+    <string name="_60">60</string>
+    <string name="working_hours">Working Hours:</string>
+    <string name="april_october">April-October</string>
+    <string name="every_day_except_on_mondays">every day except on Mondays</string>
+    <string name="_10_00_a_m_03_00_p_m">10:00 a.m. – 03:00 p.m.</string>
+    <string name="exhibits">Exhibits</string>
+    <string name="scan_the_qr_code">Scan the QR code</string>
+    <string name="gallery">Gallery</string>
+    <string name="history_of_matka">History of Matka</string>
+    <string name="matka_exhibition_center">Matka Exhibition Center</string>
+    <string name="history">History</string>
+    <string name="videos">Videos</string>
+    <string name="educational_videos">Educational Videos</string>
+    <string name="nikola_tesla_day">Nikola Tesla Day</string>
+    <string name="drawings_nikola_tesla_day">Drawings - Nikola Tesla Day</string>
+    <string name="history_of_electrification_in_macedonia">History of electrification in Macedonia</string>
+    <string name="energy_efficiency">Energy efficiency</string>
+    <string name="the_path_of_electricity">The path of electricity</string>
+    <string name="how_is_electricity_conducted">How is electricity conducted?</string>
+    <string name="renewable_sources_of_energy">Renewable sources of energy</string>
+    <string name="what_is_electricity">What is electricity?</string>
 
 
 </resources>

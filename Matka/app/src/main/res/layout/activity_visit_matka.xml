@@ -27,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/ubuntu"
-            android:text="Контакт"
+            android:text="@string/contact"
             android:textSize="18sp" />
 
 
@@ -52,7 +52,7 @@
             android:id="@+id/phone_call"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="072/935-105"
+            android:text="@string/_072_935_105"
             android:textSize="16sp" />
     </LinearLayout>
 
@@ -73,14 +73,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Автобуска линија" />
+            android:text="@string/bus_line" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:fontFamily="@font/ubuntubold"
-            android:text="60" />
+            android:text="@string/_60" />
 
     </LinearLayout>
 
@@ -103,7 +103,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="10dp"
         android:fontFamily="@font/ubuntubold"
-        android:text="Работно време:"
+        android:text="@string/working_hours"
         android:textSize="24sp" />
 
     <androidx.cardview.widget.CardView
@@ -124,7 +124,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:text="април – октомври"
+                android:text="@string/april_october"
                 android:textSize="16sp" />
 
             <TextView
@@ -132,7 +132,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:text="секој ден освен понеделник "
+                android:text="@string/every_day_except_on_mondays"
                 android:textSize="16sp" />
 
             <TextView
@@ -140,22 +140,13 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:fontFamily="@font/ubuntubold"
-                android:text="10:00 – 15:00 часот"
+                android:text="@string/_10_00_a_m_03_00_p_m"
                 android:textSize="16sp" />
 
 
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
-
-<!--    <androidx.cardview.widget.CardView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="30dp"-->
-<!--        android:layout_marginTop="16dp"-->
-<!--        app:cardBackgroundColor="@color/white">-->
-
-
-<!--    </androidx.cardview.widget.CardView>-->
 
     <ImageView
         android:layout_gravity="start"
@@ -165,7 +156,5 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:src="@drawable/env_logo" />
-
-
 </LinearLayout>
 </ScrollView>

@@ -26,7 +26,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/ubuntubold"
-                android:text="Изложбен Центар Матка"
+                android:text="@string/matka_exhibition_center"
                 android:textSize="18sp" />
 
             <View

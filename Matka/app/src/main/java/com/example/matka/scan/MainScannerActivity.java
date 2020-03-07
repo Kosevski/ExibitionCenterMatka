@@ -34,7 +34,7 @@ public class MainScannerActivity extends AppCompatActivity {
         }
         switch (requestCode) {
             case CUSTOMIZED_REQUEST_CODE: {
-                Toast.makeText(this, "REQUEST_CODE = " + requestCode, Toast.LENGTH_LONG).show();
+//                Toast.makeText(this, "REQUEST_CODE = " + requestCode, Toast.LENGTH_LONG).show();
                 break;
             }
             default:
@@ -48,10 +48,10 @@ public class MainScannerActivity extends AppCompatActivity {
             Toast.makeText(this, "Откажано", Toast.LENGTH_LONG).show();
         } else {
             Log.d("MainActivity", "Scanned");
-            Toast.makeText(this, "Резултат: " + result.getContents(), Toast.LENGTH_LONG).show();
+//            Toast.makeText(this, "Резултат: " + result.getContents(), Toast.LENGTH_LONG).show();
         }
 
-//        if (result.getContents().equals("Test")) {
+
             Intent serviceIntent = new Intent(this, PlayAudioService.class);
             serviceIntent.putExtra("ResultContents", result.getContents());
             startService(serviceIntent);
@@ -60,8 +60,6 @@ public class MainScannerActivity extends AppCompatActivity {
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
         }
-//    }
-
 
     public void scanMarginScanner() {
         IntentIntegrator integrator = new IntentIntegrator(this);

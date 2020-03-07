@@ -51,7 +51,7 @@
             android:fontFamily="@font/ubuntu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Историја на Матка"/>
+            android:text="@string/history_of_matka"/>
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -190,7 +190,6 @@
                         android:layout_margin="10dp"
                         android:src="@drawable/istorija_pet"
                         />
-
 
                 </LinearLayout>
 
